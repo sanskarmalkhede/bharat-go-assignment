@@ -1,50 +1,90 @@
-# React + TypeScript + Vite
+# 🛍️ E-Commerce App  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **full-stack e-commerce** application built using **Vite, React, Tailwind CSS, and TypeScript**. This project provides a smooth shopping experience, allowing users to browse products, add them to a cart, and proceed to checkout.  
 
-Currently, two official plugins are available:
+## 🚀 Features  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ **Product Listing** – View all products fetched from an external API.  
+✅ **Category Pages** – Browse products by categories: Clothes, Electronics, Furniture, and Toys.  
+✅ **Product Details** – Click on a product to view its details.  
+✅ **Add to Cart** – Easily add items to the cart using a floating `+` button.  
+✅ **Cart Management** – Increase/decrease quantity, remove items, and view total price.  
+✅ **Checkout Page** – Review and confirm orders before checkout.  
+✅ **Smooth UI/UX** – Built with **Tailwind CSS** for a responsive design.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ Tech Stack  
 
-- Configure the top-level `parserOptions` property like this:
+- **Frontend**: React (Vite) + TypeScript  
+- **UI Styling**: Tailwind CSS  
+- **State Management**: React Hooks  
+- **API**: [FakeStore API](https://api.escuelajs.co/api/v1/products)  
+- **Icons**: Heroicons (SVG icons)  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 📂 Project Structure  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+📦 e-commerce-app
+┣ 📂 src
+┃ ┣ 📂 components
+┃ ┃ ┣ 📜 Navbar.tsx
+┃ ┃ ┣ 📜 Cart.tsx
+┃ ┃ ┣ 📜 ProductCard.tsx
+┃ ┣ 📂 pages
+┃ ┃ ┣ 📜 All.tsx
+┃ ┃ ┣ 📜 Clothes.tsx
+┃ ┃ ┣ 📜 Electronics.tsx
+┃ ┃ ┣ 📜 Furniture.tsx
+┃ ┃ ┣ 📜 Toys.tsx
+┃ ┃ ┣ 📜 Details.tsx
+┃ ┣ 📂 api
+┃ ┃ ┣ 📜 index.ts (Handles API calls)
+┃ ┣ 📜 App.tsx
+┃ ┣ 📜 main.tsx
+┗ 📜 README.md
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+---
+
+## 🏗️ Installation  
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone [https://github.com/your-username/e-commerce-app.git](https://www.google.com/search?q=https://github.com/your-username/e-commerce-app.git)
+cd e-commerce-app
+2️⃣ Install dependencies
+Bash
+
+npm install
+3️⃣ Start the development server
+Bash
+
+npm run dev
+The app should now be running at http://localhost:5173/ 🚀
+
+⚡ API Integration
+This project fetches product data from the FakeStore API:
+
+All Products: https://api.escuelajs.co/api/v1/products
+Category-based: https://api.escuelajs.co/api/v1/categories/{category_id}
+🎨 UI Preview
+[Home Page Screenshot]
+
+[Product Details Screenshot]
+
+[Cart Screenshot]
+
+📌 TODO / Future Improvements
+🛒 Add authentication for users
+
+💳 Integrate a real payment gateway
+
+⭐ Wishlist feature
+
+📝 User reviews & ratings
+
+🤝 Contributing
+Feel free to fork this repo and submit a pull request if you'd like to improve it!
